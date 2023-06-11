@@ -45,17 +45,17 @@ const ChatPage = () => {
         {show === false ? setShow(true) : setShow(false)}
     };
 
-    const deleteMessageHandler = async (mid) => {
+    /*const deleteMessageHandler = async (mid) => {
         const mesgDoc = doc(db, "usermessages", mid);
         console.log(mesgDoc);
         await deleteDoc(mesgDoc);
 
-    }; 
+    };*/ 
 
     useEffect(() => {
         const getMessages = async () => {
             const data = await getDocs(messageCollectionRef);
-            const mesdata = data.docs.map((doc) => {doc.data()});
+            const mesdata = data.docs.map((doc) => doc.data());
             //console.log(mesdata);
             const mesa = mesdata.map((mdata) => mdata.messages);
             setMessageStack(mesa);
@@ -92,7 +92,7 @@ const ChatPage = () => {
                             {mes.message}
                             <br />
                             <div className='span_time'>{mes.hours}:{mes.min}</div>
-                            { messageDelete==mes.id && show===true && <BsFillTrash3Fill onClick={() => deleteMessageHandler(mes.id)} />}
+                            { messageDelete==mes.id && show===true && <BsFillTrash3Fill />}
                         </li>
                     </div>
                 })}
