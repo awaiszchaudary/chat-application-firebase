@@ -1,0 +1,19 @@
+.input{
+    border: none;
+    border-bottom: 2px solid grey;
+
+}
+
+.input input:focus{
+    border: none;
+    border-bottom: 2px solid grey;
+}
+
+.button{
+    border: 1px solid rgb(8, 221, 8);
+    border-radius: 10px;
+    padding: 8px 24px;
+    background-color: rgb(8, 221, 8);
+    color: white;
+    
+}
