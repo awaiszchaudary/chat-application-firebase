@@ -4,7 +4,6 @@ import ChatPage from './components/ChatPage';
 import SigninPage from './components/Signin/SigninPage';
 import SignupPage from './components/Signup/SignupPage';
 import './App.css';
-
 function App() {
   return (
     <Fragment>
